@@ -5,7 +5,7 @@ class Sentimental
 
   attr_accessor :threshold, :word_scores, :neutral_regexps, :ngrams, :influencers
 
-  def initialize(threshold: 0, word_scores: nil, neutral_regexps: [], ngrams: 1, influencers: nil)
+  def initialize(threshold = 0, word_scores = nil, neutral_regexps = [], ngrams = 1, influencers = nil)
     @ngrams = ngrams.to_i.abs if ngrams.to_i >= 1
     @word_scores = word_scores || {}
     @influencers = influencers || {}
